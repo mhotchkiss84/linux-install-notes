@@ -1,0 +1,2 @@
+Kept getting a pip error and had to use:
+apt-get install python3-pip
