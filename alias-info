@@ -1,0 +1,39 @@
+Termingal: nano ~/. bashrc
+
+alias mk="mkdir"
+alias c="clear"
+alias gpo="git push origin"
+alias gcb="git checkout -b"
+alias gc="git checkout "
+alias gs="git status"
+alias gi="git init"
+alias refresh="source ~/.bashrc"
+alias gohome="cd ~"
+alias tree="cmd //c tree/f"
+
+# make a new directory, cd into it, create js/html/css files, and link them up
+basicProj(){
+    mkdir -p "$1"
+    cd "$1"
+    git init
+    touch index.html
+    touch script.js
+    touch style.css
+    echo "<!DOCTYPE html>
+<html lang=\"en\">
+  <head>
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport" content="width=device-width, initial-scale=1.0\" />
+    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />
+    <link rel=\"stylesheet\" href=\"style.css\" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src=\"script.js\"></script>
+  </body>
+</html>" > index.html
+}
+
+^0 write
+^x save
+On Mac: Had to create the bashrc file for some reason. 
