@@ -1,15 +1,10 @@
 Termingal: nano ~/. bashrc
 
-alias mk="mkdir"
-alias c="clear"
-alias gpo="git push origin"
-alias gcb="git checkout -b"
-alias gc="git checkout "
-alias gs="git status"
-alias gi="git init"
-alias refresh="source ~/.bashrc"
-alias gohome="cd ~"
-alias tree="cmd //c tree/f"
+#Make new directory and change into the directory
+mg(){
+    mkdir -p "$1"
+    cd "$1"
+}
 
 # make a new directory, cd into it, create js/html/css files, and link them up
 basicProj(){
@@ -33,6 +28,27 @@ basicProj(){
   </body>
 </html>" > index.html
 }
+
+help () {
+    clear
+    echo " - gohome                    Takes me to my home directory"
+    echo " - cat [filename]            Outputs the contents of a file right in the terminal"
+    echo " - touch [filename]          Creates a new file"
+    echo " - mkdir [directory]         Creates a new directory"
+    echo " - mg [directory]            Creates a new directory and goes into it"
+    echo " - basicProj [directory]     Creates a new directory with HTML, CSS, and JS files"
+}
+
+alias mk="mkdir"
+alias c="clear"
+alias gpo="git push origin"
+alias gcb="git checkout -b"
+alias gc="git checkout "
+alias gs="git status"
+alias gi="git init"
+alias refresh="source ~/.bashrc"
+alias gohome="cd ~"
+alias tree="cmd //c tree/f"
 
 ^0 write
 ^x save
