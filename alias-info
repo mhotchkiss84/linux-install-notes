@@ -53,3 +53,4 @@ alias tree="cmd //c tree/f"
 ^0 write
 ^x save
 On Mac: Had to create the bashrc file for some reason. 
+Reload when done
